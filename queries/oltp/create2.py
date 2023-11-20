@@ -4,14 +4,24 @@ from pprint import pprint
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 import time
+from argparse import ArgumentParser
+
+parser = ArgumentParser()
+parser.add_argument("coll_name")
+args = parser.parse_args()
+
+if args.coll_name not in ('sf1', 'sf2', 'sf3', 'sf4', 'sf5'):
+    raise ValueError("Wrong collection name")
 
 random.seed(0)
 
 # MongoDB connection (assuming default host and port)
-coll = 'sf1'
+uri = 'mongodb://localhost:27017/'
+db_name = 'advdb_project'
+collection_name =  args.coll_name
 client = MongoClient('localhost', 27017)
-db = client['advdb_project']
-collection = db[coll]
+db = client[db_name]
+collection = db[collection_name]
 N = collection.count_documents({})
 
 def sample_bot_users(sample=5):

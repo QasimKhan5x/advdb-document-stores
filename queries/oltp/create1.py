@@ -1,14 +1,25 @@
 import random
 import time
 from pymongo import MongoClient
-from bson.objectid import ObjectId
+from bson.objectid import ObjectIdfrom argparse import ArgumentParser
+from argparse import ArgumentParser
+
+parser = ArgumentParser()
+parser.add_argument("coll_name")
+args = parser.parse_args()
+
+uri = 'mongodb://localhost:27017/'
+db_name = 'advdb_project'
+collection_name =  args.coll_name
+if collection_name not in ('sf1', 'sf2', 'sf3', 'sf4', 'sf5'):
+    raise ValueError("Wrong collection name")
 
 # Create a MongoDB client (assuming MongoDB is running on the default host and port)
 client = MongoClient('localhost', 27017)
 
 # Use a specific database and collection
-db = client['advdb_project']
-collection = db['sf1']
+db = client[db_name]
+collection = db[collection_name]
 
 # Define a set of random hashtags
 hashtags = ["#Tech", "#News", "#Sports", "#Entertainment", "#Travel"]

@@ -11,3 +11,10 @@ TotalSeconds      : 0.8685143
 TotalMilliseconds : 868.5143
 
 1. Execution time for batch insert: 0.007967710494995117 seconds
+2. Execution time for batch insert: 0.006999969482421875 seconds
+3. find_tweets_with_hashtag_and_retweets: 0.027796268463134766
+4. find_influencer_accounts: 0.0030069351196289062
+5. update_user_profiles_based_on_activity: 0.021069049835205078
+5. update_user_profiles_based_on_activity: 0.0169985294342041
+6. tag_users_based_on_topic_interaction: 0.011008262634277344
+8. Time taken to delete tweets from users with few followers: 0.030998706817626953 seconds

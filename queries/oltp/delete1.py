@@ -1,10 +1,17 @@
 from pymongo import MongoClient
 import time
+from argparse import ArgumentParser
+
+parser = ArgumentParser()
+parser.add_argument("coll_name")
+args = parser.parse_args()
 
 # MongoDB connection details
 uri = 'mongodb://localhost:27017/'
 db_name = 'advdb_project'
-collection_name = 'sf1'
+collection_name =  args.coll_name
+if collection_name not in ('sf1', 'sf2', 'sf3', 'sf4', 'sf5'):
+    raise ValueError("Wrong collection name")
 
 # Connect to MongoDB
 client = MongoClient(uri)

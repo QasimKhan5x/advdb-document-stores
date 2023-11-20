@@ -1,5 +1,16 @@
 from pymongo import MongoClient
 import time
+from argparse import ArgumentParser
+
+parser = ArgumentParser()
+parser.add_argument("coll_name")
+args = parser.parse_args()
+
+uri = 'mongodb://localhost:27017/'
+db_name = 'advdb_project'
+collection_name =  args.coll_name
+if collection_name not in ('sf1', 'sf2', 'sf3', 'sf4', 'sf5'):
+    raise ValueError("Wrong collection name")
 
 def connect_to_mongodb(uri, db_name, collection):
     """ Connect to MongoDB and return the specified collection from the database. """
@@ -22,7 +33,7 @@ def find_influencer_accounts(collection, follower_threshold):
     return collection.find(query, { "user.id": 1, "_id": 0 })
 
 # Example usage
-collection = connect_to_mongodb('mongodb://127.0.0.1:27017', 'advdb_project', 'sf1')
+collection = connect_to_mongodb('mongodb://127.0.0.1:27017', db_name, collection_name)
 
 start_time = time.time()
 # For finding tweets with a specific hashtag and high retweet count

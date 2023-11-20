@@ -17,4 +17,15 @@ TotalMilliseconds : 868.5143
 5. update_user_profiles_based_on_activity: 0.021069049835205078
 5. update_user_profiles_based_on_activity: 0.0169985294342041
 6. tag_users_based_on_topic_interaction: 0.011008262634277344
+7. Time taken to delete low engagement tweets: 0.044001102447509766 seconds
 8. Time taken to delete tweets from users with few followers: 0.030998706817626953 seconds
+
+OLAP Queries
+1. Execution time: 0.0170285701751709 seconds
+2. Execution time: 0.0030257701873779297 seconds
+3. Execution time: 0.00899958610534668 seconds  
+4. Execution time: 0.004000663757324219 seconds 
+5. Execution time: 0.013017654418945312 seconds
+6. Execution time: 0.01195979118347168 seconds
+7. Execution time: 0.013022899627685547 seconds
+8. Execution time: 0.00796198844909668 seconds

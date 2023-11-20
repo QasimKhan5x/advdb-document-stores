@@ -9,3 +9,5 @@ TotalHours        : 0.000241253972222222
 TotalMinutes      : 0.0144752383333333
 TotalSeconds      : 0.8685143
 TotalMilliseconds : 868.5143
+
+1. Execution time for batch insert: 0.007967710494995117 seconds

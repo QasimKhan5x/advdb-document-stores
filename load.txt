@@ -1,0 +1,5 @@
+Measure-Command { mongoimport --db advdb_project --collection sf1 --file data/twitter_sf_1.json }
+Measure-Command { mongoimport --db advdb_project --collection sf2 --file data/twitter_sf_2.json }
+Measure-Command { mongoimport --db advdb_project --collection sf3 --file data/twitter_sf_3.json }
+Measure-Command { mongoimport --db advdb_project --collection sf4 --file data/twitter_sf_4.json }
+Measure-Command { mongoimport --db advdb_project --collection sf5 --file data/twitter.json }

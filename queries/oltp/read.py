@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 parser = ArgumentParser()
 parser.add_argument("coll_name")
 args = parser.parse_args()
+print(args.coll_name)
 
 uri = 'mongodb://localhost:27017/'
 db_name = 'advdb_project'
@@ -37,14 +38,12 @@ collection = connect_to_mongodb('mongodb://127.0.0.1:27017', db_name, collection
 
 start_time = time.time()
 # For finding tweets with a specific hashtag and high retweet count
-for tweet in find_tweets_with_hashtag_and_retweets(collection, 'ThingsICantLiveWithout', 0):
-    print(tweet)
+print(len(list(find_tweets_with_hashtag_and_retweets(collection, 'ThingsICantLiveWithout', 1))))
 end_time = time.time()
 print("3. find_tweets_with_hashtag_and_retweets:", end_time - start_time)
 
 start_time = time.time()
 # For finding influencer accounts
-for tweet in find_influencer_accounts(collection, 10000):
-    print(tweet['user'])
+print(len(list(find_influencer_accounts(collection, 1000))))
 end_time = time.time()
 print("4. find_influencer_accounts:", end_time - start_time)

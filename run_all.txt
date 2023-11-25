@@ -1,0 +1,47 @@
+Measure-Command { mongoimport --db advdb_project --collection sf1 --file data/twitter_sf_1.json }
+Measure-Command { mongoimport --db advdb_project --collection sf2 --file data/twitter_sf_2.json }
+Measure-Command { mongoimport --db advdb_project --collection sf3 --file data/twitter_sf_3.json }
+Measure-Command { mongoimport --db advdb_project --collection sf4 --file data/twitter_sf_4.json }
+Measure-Command { mongoimport --db advdb_project --collection sf5 --file data/twitter.json }
+cd queries
+python olap.py sf1
+python olap.py sf2
+python olap.py sf3
+python olap.py sf4
+python olap.py sf5
+cd oltp
+sf=sf1
+python read.py $sf
+python create1.py $sf
+python create2.py $sf
+python delete1.py $sf
+python delete2.py $sf
+python update.py $sf
+sf=sf2
+python read.py $sf
+python create1.py $sf
+python create2.py $sf
+python delete1.py $sf
+python delete2.py $sf
+python update.py $sf
+sf=sf3
+python read.py $sf
+python create1.py $sf
+python create2.py $sf
+python delete1.py $sf
+python delete2.py $sf
+python update.py $sf
+sf=sf4
+python read.py $sf
+python create1.py $sf
+python create2.py $sf
+python delete1.py $sf
+python delete2.py $sf
+python update.py $sf
+sf=sf5
+python read.py $sf
+python create1.py $sf
+python create2.py $sf
+python delete1.py $sf
+python delete2.py $sf
+python update.py $sf

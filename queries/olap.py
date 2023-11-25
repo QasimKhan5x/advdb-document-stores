@@ -319,7 +319,6 @@ def analyze_tweet_topic_evolution(collection):
     return list(results)
 
 
-# Main execution
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python script.py <collection_name>")

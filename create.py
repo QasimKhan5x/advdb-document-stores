@@ -9,33 +9,34 @@ random.seed(0)
 def create_sf_data(scale_factor):
     num_objects = scale_factors[scale_factor - 1]
     total_objects = 1984049
-
-    # Generate a set of unique random indices to sample
     indices_to_sample = set(random.sample(range(total_objects), num_objects))
 
     with open("twitter.json", "r", encoding="utf-8") as file, open(
-        f"./data/twitter_sf_{scale_factor}.json", "w", encoding="utf-8"
+        f"data/twitter_sf_{scale_factor}_2.json", "w", encoding="utf-8"
     ) as outfile:
+        # Start the JSON array
+        outfile.write('{"docs": [\n')
+        first_object = True
         for i, line in enumerate(file):
             if i in indices_to_sample:
                 try:
-                    # Write the object to the file
-                    outfile.write(line.strip())
-                    outfile.write("\n")  # New line after each object
-
+                    json_object = json.loads(line.strip())
+                    oid = json_object["_id"]["$oid"]
+                    json_object["_id"] = oid
+                    if not first_object:
+                        outfile.write(
+                            ",\n"
+                        )  # Add comma before the next object (except the first)
+                    json.dump(json_object, outfile)  # Write the object to the file
+                    first_object = False  # Update flag after writing the first object
                 except json.JSONDecodeError:
                     print(f"Error decoding JSON on line {i}")
-
-                # Remove the index from the set for efficiency
                 indices_to_sample.remove(i)
-
-                # Break if we have sampled enough
                 if not indices_to_sample:
                     break
+        # Close the JSON array
+        outfile.write("\n]}")
 
 
 # Example usage
 create_sf_data(1)
-
-# use this to load and measure execution time
-# Measure-Command { mongoimport --db advdb_project --collection sf4 --file data/twitter_sf_4.json }

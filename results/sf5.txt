@@ -1,11 +1,20 @@
-Days              : 0
-Hours             : 0
-Minutes           : 2
-Seconds           : 39
-Milliseconds      : 173
-Ticks             : 1591736508
-TotalDays         : 0.001842287625
-TotalHours        : 0.044214903
-TotalMinutes      : 2.65289418
-TotalSeconds      : 159.1736508
-TotalMilliseconds : 159173.6508
+TotalSeconds      : 166.8523217
+
+OLAp
+1. Execution time: 47.206642627716064 seconds
+2. Execution time: 6.386000871658325 seconds
+3. Execution time: 27.939712524414062 seconds
+4. Execution time: 6.953596591949463 seconds
+5. Execution time: 33.007203817367554 seconds
+6. Execution time: 26.309736013412476 seconds
+7. Execution time: 20.608190059661865 seconds
+8. Execution time: 11.222250938415527 seconds
+
+read 1: 0.0
+read 2: 0.0
+create 1: 19.784000158309937 seconds
+create 2: 24.475173711776733 seconds
+Delete 1: 195.08486938476562 seconds
+Delete 2: 74.09866499900818 seconds
+update 1: 24.402997970581055
+update 2: 9.030999660491943

@@ -1,0 +1,30 @@
+db.sf1.createIndex({"created_at": 1});
+db.sf1.createIndex({"user.location": 1});
+db.sf1.createIndex({"entities.hashtags.text": 1});
+db.sf1.createIndex({"text": "text"});
+db.sf1.createIndex({"user.id_str": 1});
+
+db.sf2.createIndex({"created_at": 1});
+db.sf2.createIndex({"user.location": 1});
+db.sf2.createIndex({"entities.hashtags.text": 1});
+db.sf2.createIndex({"text": "text"});
+db.sf2.createIndex({"user.id_str": 1});
+
+db.sf3.createIndex({"created_at": 1});
+db.sf3.createIndex({"user.location": 1});
+db.sf3.createIndex({"entities.hashtags.text": 1});
+db.sf3.createIndex({"text": "text"});
+db.sf3.createIndex({"user.id_str": 1});
+
+db.sf4.createIndex({"created_at": 1});
+db.sf4.createIndex({"user.location": 1});
+db.sf4.createIndex({"entities.hashtags.text": 1});
+db.sf4.createIndex({"text": "text"});
+db.sf4.createIndex({"user.id_str": 1});
+
+db.sf5.createIndex({"created_at": 1});
+db.sf5.createIndex({"user.location": 1});
+db.sf5.createIndex({"entities.hashtags.text": 1});
+db.sf5.createIndex({"text": "text"});
+db.sf5.createIndex({"user.id_str": 1});
+

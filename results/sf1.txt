@@ -1,31 +1,20 @@
-Days              : 0
-Hours             : 0
-Minutes           : 0
-Seconds           : 0
-Milliseconds      : 868
-Ticks             : 8685143
-TotalDays         : 1.00522488425926E-05
-TotalHours        : 0.000241253972222222
-TotalMinutes      : 0.0144752383333333
-TotalSeconds      : 0.8685143
-TotalMilliseconds : 868.5143
+TotalSeconds      : 0.7753737
 
-1. Execution time for batch insert: 0.007967710494995117 seconds
-2. Execution time for batch insert: 0.006999969482421875 seconds
-3. find_tweets_with_hashtag_and_retweets: 0.027796268463134766
-4. find_influencer_accounts: 0.0030069351196289062
-5. update_user_profiles_based_on_activity: 0.021069049835205078
-5. update_user_profiles_based_on_activity: 0.0169985294342041
-6. tag_users_based_on_topic_interaction: 0.011008262634277344
-7. Time taken to delete low engagement tweets: 0.044001102447509766 seconds
-8. Time taken to delete tweets from users with few followers: 0.030998706817626953 seconds
+OLAP
+1. Execution time: 0.07701754570007324 seconds
+2. Execution time: 0.009989023208618164 seconds
+3. Execution time: 0.010999441146850586 seconds
+4. Execution time: 0.005001068115234375 seconds
+5. Execution time: 0.017999887466430664 seconds
+6. Execution time: 0.009999275207519531 seconds
+7. Execution time: 0.011003494262695312 seconds
+8. Execution time: 0.005998849868774414 seconds
 
-OLAP Queries
-1. Execution time: 0.0170285701751709 seconds
-2. Execution time: 0.0030257701873779297 seconds
-3. Execution time: 0.00899958610534668 seconds  
-4. Execution time: 0.004000663757324219 seconds 
-5. Execution time: 0.013017654418945312 seconds
-6. Execution time: 0.01195979118347168 seconds
-7. Execution time: 0.013022899627685547 seconds
-8. Execution time: 0.00796198844909668 seconds
+read 1: 0.006000518798828125
+read 2: 0.0019998550415039062
+create 1: 0.0050008296966552734 seconds
+create 2: 0.10823750495910645 seconds
+Delete 1: 0.006998300552368164 seconds
+Delete 2: 0.005001544952392578 seconds
+update 1: 0.04698467254638672
+update 2: 0.004006862640380859

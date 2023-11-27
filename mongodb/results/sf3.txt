@@ -1,0 +1,20 @@
+TotalSeconds      : 85.6721657
+
+OLAP
+1. Execution time: 23.220705032348633 seconds
+2. Execution time: 2.2209973335266113 seconds
+3. Execution time: 14.01741337776184 seconds
+4. Execution time: 3.096999406814575 seconds
+5. Execution time: 16.168182134628296 seconds
+6. Execution time: 12.771371126174927 seconds
+7. Execution time: 10.422001361846924 seconds
+8. Execution time: 5.9741668701171875 seconds
+
+read 1: 0.0
+read 2: 0.0
+create 1: 6.135470628738403 seconds
+create 2: 6.2767157554626465 seconds
+Delete 1: 19.44939613342285 seconds
+Delete 2: 11.939510107040405 seconds
+update 1: 5.086018323898315
+update 2: 2.617004156112671

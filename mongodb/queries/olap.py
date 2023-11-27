@@ -325,7 +325,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     collection_name = sys.argv[1]
-    db = connect_to_mongodb("mongodb://localhost:27017/", "advdb_project")
+    db = connect_to_mongodb("mongodb://localhost:27017/", "twitter")
     determine_influential_users(db[collection_name])
     analyze_content_evolution(db[collection_name], ["twitter", "love"])
     analyze_network_interactions(db[collection_name])

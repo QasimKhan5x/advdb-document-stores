@@ -38,4 +38,4 @@ def create_sf_data(scale_factor):
 create_sf_data(1)
 
 # use this to load and measure execution time
-# Measure-Command { mongoimport --db advdb_project --collection sf4 --file data/twitter_sf_4.json }
+# Measure-Command { mongoimport --db twitter --collection sf4 --file data/twitter_sf_4.json }

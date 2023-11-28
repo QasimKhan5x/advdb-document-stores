@@ -1,0 +1,16 @@
+SF1 COPY Command Execution Time: 82.469 ms
+SF1 INSERT Command Execution Time: 19.318 ms
+
+SF2 COPY Command Execution Time: 44092.608 ms
+SF2 INSERT Command Execution Time: 17085.444 ms
+
+SF3 COPY Command Execution Time: 90086.520 ms
+SF3 INSERT Command Execution Time: 61406.723 ms
+
+SF4 COPY Command Execution Time: 154185.097 ms
+SF4 INSERT Command Execution Time: 152345.689 ms
+
+SF5 COPY Command Execution Time: 189458.411 ms
+SF5 INSERT Command Execution Time: 194017.805 ms
+
+

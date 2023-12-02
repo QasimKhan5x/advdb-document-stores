@@ -8,3 +8,5 @@ delete 1: 4.2770771980285645 seconds
 delete 2: 4.2913758754730225 seconds
 update 1: 2.0578951835632324 seconds
 update 2: 49.39361596107483 seconds
+
+determine_influential_users: 7.622413158416748 seconds

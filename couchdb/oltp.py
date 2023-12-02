@@ -297,7 +297,7 @@ def fetch_documents_in_batches(db_name, user_id, auth, batch_size=100):
         user_docs_url = f'http://localhost:5984/{db_name}/_design/user_docs/_view/by_user_id?key="{user_id}"&limit={batch_size}&skip={skip}'
         user_docs_response = requests.get(user_docs_url, auth=auth)
         user_docs = user_docs_response.json()
-        print(user_docs)
+        pprint(user_docs)
         # Check if there are no more rows
         if not user_docs["rows"]:
             break
@@ -321,7 +321,7 @@ def tag_users_based_on_topic_interaction(db_name, keyword, auth):
     find_url = f"http://localhost:5984/{db_name}/_find"
     find_response = requests.post(find_url, json=query, auth=auth)
     find_data = find_response.json()
-
+    pprint(find_data)
     # Extract unique user IDs
     user_ids = set(
         doc["user"]["id_str"]
@@ -346,7 +346,6 @@ def tag_users_based_on_topic_interaction(db_name, keyword, auth):
         bulk_update_url = f"http://localhost:5984/{db_name}/_bulk_docs"
         for i in range(0, len(documents_to_update), 10000):
             bulk_docs = {"docs": documents_to_update[i : i + 10000]}
-            bulk_docs = {"docs": documents_to_update[i : i + 100000]}
             bulk_update_response = requests.post(
                 bulk_update_url, json=bulk_docs, auth=auth
             )
@@ -383,17 +382,17 @@ def main():
     # response = find_influencer_accounts(db_name, 1000, auth)
 
     # create 1
-    sample_documents = generate_data(N // 4)
+    # sample_documents = generate_data(N // 4)
     start_time = time.time()
     # for i in range(0, len(sample_documents), 10000):
     # insert_documents(db_name, sample_documents[i : i + 10000], auth)
     print(f"create 1: {time.time() - start_time} seconds")
-    N = get_document_count(db_name, auth)
+    # N = get_document_count(db_name, auth)
     # print(f"Number of documents in {db_name}: {N}")
 
     # create 2
-    bot_users = sample_bot_users(int(N**0.25))
-    bot_tweets = generate_bot_tweets(N // 4, bot_users)
+    # bot_users = sample_bot_users(int(N**0.25))
+    # bot_tweets = generate_bot_tweets(N // 4, bot_users)
     start_time = time.time()
     # for i in range(0, len(sample_documents), 10000):
     # insert_documents(db_name, bot_tweets[i : i + 10000], auth)
@@ -413,7 +412,7 @@ def main():
 
     # update 1
     start_time = time.time()
-    update_user_profiles_based_on_activity(db_name, 10, auth)
+    # update_user_profiles_based_on_activity(db_name, 10, auth)
     print(f"update 1: {time.time() - start_time} seconds")
 
     # update 2

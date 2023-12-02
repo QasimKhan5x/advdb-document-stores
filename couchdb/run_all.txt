@@ -18,3 +18,9 @@ python -m couchdb.index sf5
 python -m couchdb.views sf5
 python -m couchdb.oltp sf5
 
+python -m couchdb.create_db sf2
+python -m couchdb.index sf2
+python -m couchdb.views sf2
+python -m couchdb.create_db sf3
+python -m couchdb.index sf3
+python -m couchdb.views sf3

@@ -23,7 +23,7 @@ user_docs = {
         "by_user_id": {
             "map": "function(doc) { if (doc.user && doc.user.id_str) { emit(doc.user.id_str, doc); } }"
         }
-    },
+    }
 }
 
 if __name__ == "__main__":

@@ -1,0 +1,26 @@
+python -m couchdb.create_db sf2
+python -m couchdb.index sf2
+python -m couchdb.views sf2
+python -m couchdb.oltp sf2
+
+python -m couchdb.create_db sf3
+python -m couchdb.index sf3
+python -m couchdb.views sf3
+python -m couchdb.oltp sf3
+
+python -m couchdb.create_db sf4
+python -m couchdb.index sf4
+python -m couchdb.views sf4
+python -m couchdb.oltp sf4
+
+python -m couchdb.create_db sf5
+python -m couchdb.index sf5
+python -m couchdb.views sf5
+python -m couchdb.oltp sf5
+
+python -m couchdb.create_db sf2
+python -m couchdb.index sf2
+python -m couchdb.views sf2
+python -m couchdb.create_db sf3
+python -m couchdb.index sf3
+python -m couchdb.views sf3

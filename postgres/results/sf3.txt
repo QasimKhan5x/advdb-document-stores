@@ -1,0 +1,16 @@
+Execution Time for OLTP Query 1: 116.41779279708862 s
+Execution Time for OLTP Query 2: 108.88194990158081 s
+Execution Time for OLTP Query 3: 8.531214714050293 s
+Execution Time for OLTP Query 4: 16.490071296691895 s
+Execution Time for OLTP Query 5: 429.37431383132935 s
+Execution Time for OLTP Query 6: 35.66770148277283 s
+Execution Time for OLTP Query 7: 54.607749462127686 s
+Execution Time for OLTP Query 8: 45.74748635292053 s
+Execution Time for OLAP Query 1: 42.372997522354126 s
+Execution Time for OLAP Query 2: 9.724591970443726 s
+Execution Time for OLAP Query 3: 20.405325412750244 s
+Execution Time for OLAP Query 4: 6.306107044219971 s
+Execution Time for OLAP Query 5: 9.683115482330322 s
+Execution Time for OLAP Query 6: 43.6398663520813 s
+Execution Time for OLAP Query 7: 13.908417701721191 s
+Execution Time for OLAP Query 8: 13.309904098510742 s
